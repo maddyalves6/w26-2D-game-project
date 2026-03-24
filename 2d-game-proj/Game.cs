@@ -41,7 +41,7 @@ namespace MohawkGame2D
             }
 
             // spawn spike every 2 seconds
-            if (Time.SecondsElapsed % 2 == 0)
+            if (Time.SecondsElapsed % 2 <= 0.05)
             {
                 if (Random.Bool())
                 {
@@ -54,7 +54,7 @@ namespace MohawkGame2D
             }
 
             // up tempo every minute
-            if (Time.SecondsElapsed % 60 == 0)
+            if (Time.SecondsElapsed % 60 <= 0.05)
             {
                 tempo--;
             }
