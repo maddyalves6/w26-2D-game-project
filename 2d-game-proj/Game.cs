@@ -40,6 +40,25 @@ namespace MohawkGame2D
                 Dino.SetDinoYVel(-15);
             }
 
+            // spawn spike every 2 seconds
+            if (Time.SecondsElapsed % 2 == 0)
+            {
+                if (Random.Bool())
+                {
+                    Spikes.Spawn(290);
+                }
+                else
+                {
+                    Spikes.Spawn(180);
+                }
+            }
+
+            // up tempo every minute
+            if (Time.SecondsElapsed % 60 == 0)
+            {
+                tempo--;
+            }
+
             Floor.Step(tempo);
             Dino.Step();
             Spikes.Step(tempo);
