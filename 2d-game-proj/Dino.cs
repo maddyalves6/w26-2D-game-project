@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Numerics;
 
 namespace MohawkGame2D
 {
@@ -62,6 +63,7 @@ namespace MohawkGame2D
         // dino position getters/setters
         public float GetDinoX() { return dinoX; }
         public float GetDinoY() { return dinoY; }
+        public Vector2 GetDinoXY() { return new Vector2(dinoX, dinoY); }
         public void SetDinoX(float x) { dinoX = x; }
         public void SetDinoY(float y) { dinoY = y; }
         public void SetDinoYVel(float yvel) { velocityY = yvel; }

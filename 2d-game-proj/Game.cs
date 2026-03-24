@@ -11,6 +11,7 @@ namespace MohawkGame2D
     {
         Floor Floor = new Floor();
         Dino Dino = new Dino();
+        Spikes Spikes = new Spikes();
 
         float tempo = -4; // the amount scrolling objects will move each frame
 
@@ -24,6 +25,8 @@ namespace MohawkGame2D
             Dino.SetDinoX(100+tempo);
             Dino.SetDinoY(400);
             Dino.Step();
+
+            Spikes.Spawn(290);
         }
 
         // Update runs every frame.
@@ -39,6 +42,7 @@ namespace MohawkGame2D
 
             Floor.Step(tempo);
             Dino.Step();
+            Spikes.Step(tempo);
         }
     }
 
